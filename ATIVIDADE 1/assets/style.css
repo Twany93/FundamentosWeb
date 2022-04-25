@@ -1,0 +1,72 @@
+/* Estilos da página index.html*/
+
+.center {
+    text-align: center;
+}
+
+/* texto justificado */
+.justify{
+    text-align:justify;
+}
+
+.container{
+    display:flex;
+    flex-flow: row ;
+    /* row wrap: quebra linha para baixo */
+    justify-content: center;
+
+    /* alinha os itens de acordo com a altura deles, imagem e texto alinhadas */
+    align-items: center;
+
+}
+
+/* referente ao link em si
+-aqui ele tira o ponto, e deixa Home e Contato na mesma linha*/
+#menu li{
+    display:inline;
+    padding: 30px;
+}
+/*esse texto é referência ao a, não somente ao link, então tem mais uma camada de tag
+-tira aquele estilo de link, com linha abaixo*/
+#menu li a{
+    text-decoration: none;
+    color:#8854d0;
+    font-size: 20px;
+}
+
+/* quando o mouse passar por cima ele muda a cor */
+#menu li a:hover{
+    color:#D6A2E8;
+}
+
+.p-30{
+    padding: 30px;
+}
+
+.image{
+    border-radius:50%
+}
+
+/* como a imagem pode ser distorcida, então utilizamos esse comando */
+.wh{
+    width:400px;
+    height:400px;
+
+}
+
+/* tamanho das logos das redes sociais */
+.tm-social{
+   width: 50px;
+   height: 50px; 
+}
+
+/* espaço abaixo do vídeo */
+.mb-50{
+    margin-bottom: 50px;
+}
+
+/* Estilos da página contato.html */
+
+.ml-50{
+    margin-left: 50px;
+}

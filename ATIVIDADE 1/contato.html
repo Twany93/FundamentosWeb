@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    
+        <!-- estilizar sua página de acordo com style.css -->
+        <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <nav>
-        <ul>
+        <ul id="menu">
             <li><a  href="index.html">Home</a></li>
             <!-- caso você queira que abra o conteúdo em uma aba diferente basta acrescentar target="_blank"
 
@@ -21,59 +24,50 @@
 
     <header>
         <!-- tag semântica ter uma estrutura mais organizada, ajuda a otimização das ferramentas de buscas (SEO) -->
-        <h1>Entre em contato</h1>
+        <h1 class="center">Entre em contato comigo</h1>
     </header>
     
-    <!-- tag main- tag que envolve todo o conteúdo principal do meu site -->
-    <main>
-        <!-- section: dentro da minha main eu tenho uma seção do conteúdo -->
-        <section>
-            </h2>Esse é um espaço para apresentar seus filmes e séries favoritos</h2>
+    <div class="container">
             <!-- div: para fazer uma divisão de arquivos -->
-            <article>
-                <h2>Adicione informações</h2>
-                <h3>Colocar informações no primeiro parágrafo</h3>
-                <p>Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco Primeiro bloco </p>
-            </article>
-
-
-        </section> 
-        
-        <div>
+        <div> 
             <!-- input: naturalmente é pra inserir texto, mas pode escolher um tipo -->
+            <form>
+                <label>Nome:</label><br>
+                <input>
+                <br>
+                <br>
+                <label>Data:</label><br>
+                <input type="date">
+                <br>
+                <br>
+                <!-- tipo email ele já verifica se tem @ e .(uma estrutura básica de e-mail) -->
+                <label>E-mail:</label><br>
+                <input type="email" id="email">
+                <br>
+                <br>
+                <label>Senha:</label><br>
+                <input type="password">
+                <br>
+                <br>
+                <label for="Filmes/séries" >Filmes/séries:</label><br>
+                <textarea name="Filmes/séries" id="Filmes/séries" cols="50" rows="7"></textarea>>
+                <!-- utilizar esse br não é uma boa prática no Front, portanto essa é um exceção somente para visualização-->
+                <br>
+                <br>
+                <button>Enviar</button>
 
-            <label>Nome:</label><br>
-            <input>
-            <br>
-            <br>
-            <label>Data:</label><br>
-            <input type="date">
-            <br>
-            <br>
-            <!-- tipo email ele já verifica se tem @ e .(uma estrutura básica de e-mail) -->
-            <label>E-mail:</label><br>
-            <input type="email" id="email">
-            <br>
-            <br>
-            <label>Senha:</label><br>
-            <input type="password">
-            <br>
-            <br>
-            <label for="Filmes/séries" >Filmes/séries:</label><br>
-            <textarea name="Filmes/séries" id="Filmes/séries" cols="50" rows="7"></textarea>>
-            <!-- utilizar esse br não é uma boa prática no Front, portanto essa é um exceção somente para visualização-->
-            <br>
-            <br>
-            <button>Enviar</button>
-
-            <h2>Endereço</h2>
+                
+            </form>
+        </div>
+        
+        <div class="ml-50 mb-50 ">
             <p>R. Marechal Deodoro,400</p>
             <p>São Bernardo do Campo-SP</p>
 
             <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.027617389298!2d-46.552778385019366!3d-23.710707784608953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4180d108fb41%3A0x16b99c9f0ac417be!2sR.%20Mal.%20Deodoro%20-%20S%C3%A3o%20Bernardo%20do%20Campo%2C%20SP%2C%2016480-023!5e0!3m2!1spt-BR!2sbr!4v1650393495605!5m2!1spt-BR!2sbr" 
-            width="600" 
-            height="450" 
+            width="450" 
+            height="350" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
@@ -81,10 +75,30 @@
             </iframe>
 
         </div>
+
+
+    </div>
     
-    </main>
-    
-    <footer>Rodapé</footer>
+
+         <!-- hr é uma tag de separação de seção-->
+    <hr>
+    <footer>
+       <!-- footer: rodapé -->
+       <div class="container">
+           <!-- href: para tornar o logo clicável e redirecionável -->
+            <a href="https://www.linkedin.com/" target="_blank"> 
+               <img  class="tm-social p-30" src="assets/linkedin.png" alt="Logo do Linkedin">
+            </a>
+
+           <a href="https://github.com/"  target="_blank">  
+            <img class="tm-social p-30"  src="assets/github.png" alt="Logo do GitHub">
+           </a> 
+       </div>
+
+        <p class="center">
+          Todos os direiros reservados: Twany Teixeira Rocha &copy
+        </p>
+    </footer>
 
 
 </body>
