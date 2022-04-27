@@ -33,8 +33,9 @@
             <!-- input: naturalmente é pra inserir texto, mas pode escolher um tipo -->
             <form>
                 <label>Nome:</label><br>
-                <input>
-                <br>
+                <input type="text" id="nome" onkeyup='validaNome()'>
+                <!-- onkeyup: quando solto a tecla ele ativa a função -->
+                <div id='txtNome' ></div>
                 <br>
                 <label>Data:</label><br>
                 <input type="date">
@@ -42,19 +43,21 @@
                 <br>
                 <!-- tipo email ele já verifica se tem @ e .(uma estrutura básica de e-mail) -->
                 <label>E-mail:</label><br>
-                <input type="email" id="email">
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id='txtEmail'></div>
                 <br>
                 <br>
                 <label>Senha:</label><br>
                 <input type="password">
                 <br>
                 <br>
-                <label for="Filmes/séries" >Filmes/séries:</label><br>
-                <textarea name="Filmes/séries" id="Filmes/séries" cols="50" rows="7"></textarea>>
+                <label for="Assunto" >Assunto:</label><br>
+                <textarea name="assunto" id="assunto" cols="50" rows="7" onkeyup="validaAssunto()"></textarea>>
                 <!-- utilizar esse br não é uma boa prática no Front, portanto essa é um exceção somente para visualização-->
+                <div id='txtAssunto'></div>
                 <br>
                 <br>
-                <button>Enviar</button>
+                <button onclick='enviar()'>Enviar</button>
 
                 
             </form>
@@ -71,7 +74,8 @@
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            onmousemove="mapaZoom()" onmouseout="mapaNormal()" id='mapa'>
             </iframe>
 
         </div>
@@ -100,8 +104,7 @@
         </p>
     </footer>
 
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
 
-</body>
-</html>
-</body>
-</html>
